@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: visible; /* Changed from hidden to visible */
+    transition: all 0.3s ease;
+    background: white;
+    position: relative;
+    height: 200px;
+}
+
+.project:hover {
+    z-index: 10;
+    transform: scale(1.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.project:hover img {
+    object-fit: scale-down; /* Changed from contain to scale-down */
+    height: auto;
+    min-height: 200px;
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+#bio, #work {
+    background-color: #e9e9e9;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .art-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .project {
+        height: 150px;
+    }
+
+    .project:hover img {
+        min-height: 150px;
+        max-height: 300px;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .art-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+}
