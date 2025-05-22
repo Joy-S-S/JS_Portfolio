@@ -34,10 +34,6 @@ a {
     transition: var(--transition);
 }
 
-a:hover {
-    color: var(--primary-color);
-}
-
 ul {
     list-style: none;
 }
@@ -366,7 +362,7 @@ img {
     border-radius: 4px;
     transform: translateY(20px);
     transition: var(--transition);
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .project-link:hover {
@@ -416,6 +412,10 @@ img {
     background-color: var(--primary-color);
 }
 
+.icon{
+    margin-right: 15px;
+}
+
 .contact-info p {
     margin-bottom: 20px;
     display: flex;
@@ -423,7 +423,6 @@ img {
 }
 
 .contact-info i {
-    margin-right: 15px;
     color: var(--primary-color);
     width: 20px;
     text-align: center;
@@ -447,7 +446,6 @@ img {
 }
 
 .social-links a:hover {
-    background-color: var(--primary-color);
     transform: translateY(-5px);
 }
 
@@ -526,7 +524,6 @@ img {
 .footer-copyright {
     width: 100%;
     text-align: center;
-    margin-top: 50px;
     padding-top: 20px;
     border-top: 1px solid #333;
     color: var(--text-secondary);
