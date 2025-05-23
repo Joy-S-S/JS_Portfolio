@@ -71,15 +71,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // إرسال النموذج عبر Formsubmit
+        fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('email sent successfully!');
+                this.reset();
+            } else {
+                alert('error sending email. Please try again.');
+            }
+        })
+        .catch(error => {
+            alert('error sending email. Please try again.');
         });
-    }
+    });
+}
     
     // Initialize all project items with opacity 0 for animation
     projectItems.forEach(item => {
