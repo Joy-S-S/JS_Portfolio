@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // إرسال النموذج عبر Formsubmit
+        // Formsubmit
         fetch(this.action, {
             method: this.method,
             body: new FormData(this),
