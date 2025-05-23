@@ -81,14 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (response.ok) {
-                alert('email sent successfully!');
+                alert('Email sent successfully!');
                 this.reset();
             } else {
-                alert('error sending email. Please try again.');
+                alert('Error sending email. Please try again.');
             }
         })
         .catch(error => {
-            alert('error sending email. Please try again.');
+            alert('Error sending email. Please try again.');
         });
     });
 }
